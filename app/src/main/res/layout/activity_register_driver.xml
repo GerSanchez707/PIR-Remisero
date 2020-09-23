@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="Drivers.RegisterDriverActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar Cuenta"
+            android:textAlignment="center"
+            android:textColor="@color/quantum_black_100"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombreCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre completo"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietNombreCompleto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electronico">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMarcaAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Marca de auto">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietMarcaAuto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textCapWords"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPatenteAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Patente de auto">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietPatenteAuto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+         <!--   <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilRemisera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Remisera">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietRemisera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout> -->
+
+            <Spinner
+                android:id="@+id/spinnerremisera"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/optionsremis_array"
+                android:prompt="@string/select_option"
+                />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/options_array"
+                android:prompt="@string/select_option"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="password"
+                app:helperTextEnabled="true"
+                app:helperText="Debe contener al menos 6 caracteres"
+                app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btnRegistrarCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="registrar"
+                android:layout_margin="6dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/colorAccent"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
